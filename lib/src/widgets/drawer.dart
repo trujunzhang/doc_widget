@@ -14,7 +14,7 @@ class DrawerCustom extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
       child: Container(
-        color: ColorsDoc.ghostWhite,
+        // color: ColorsDoc.ghostWhite,
         child: ListView(
           physics: const ClampingScrollPhysics(),
           padding: EdgeInsets.zero,
