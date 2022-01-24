@@ -24,7 +24,7 @@ class _DocPreviewState extends State<DocPreview> {
 
   @override
   void initState() {
-    _selectedItem = widget.elements.first;
+    _selectedItem = widget.elements.last;
     super.initState();
   }
 
@@ -61,28 +61,24 @@ class _DocPreviewState extends State<DocPreview> {
       );
     }
 
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(scaffoldBackgroundColor: ColorsDoc.white),
-      home: Scaffold(
-        key: _scaffoldKey,
-        drawer: isMobile() ? renderDrawer() : null,
-        appBar: isMobile()
-            ? PreferredSize(
-                preferredSize: const Size.fromHeight(kToolbarHeight),
-                child: AppBarCustom(title: _selectedItem.document.name),
-              )
-            : null,
-        body: isMobile()
-            ? renderBody()
-            : Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  renderDrawer(),
-                  Expanded(child: renderBody()),
-                ],
-              ),
-      ),
+    return Scaffold(
+      key: _scaffoldKey,
+      drawer: isMobile() ? renderDrawer() : null,
+      appBar: isMobile()
+          ? PreferredSize(
+              preferredSize: const Size.fromHeight(kToolbarHeight),
+              child: AppBarCustom(title: _selectedItem.document.name),
+            )
+          : null,
+      body: isMobile()
+          ? renderBody()
+          : Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                renderDrawer(),
+                Expanded(child: renderBody()),
+              ],
+            ),
     );
   }
 }
