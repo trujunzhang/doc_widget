@@ -19,7 +19,7 @@ class TextPreview extends StatelessWidget {
       child: Text(
         text,
         style: TextStyle(
-          color: color,
+          // color: color,
           fontSize: size,
         ),
       ),
