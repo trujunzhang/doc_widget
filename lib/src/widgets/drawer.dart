@@ -23,9 +23,9 @@ class DrawerCustom extends StatelessWidget {
               height: 110,
               child: DrawerHeader(
                 child: TextPreview(text: title ?? 'doc_widget'),
-                decoration: const BoxDecoration(
-                  color: ColorsDoc.white,
-                ),
+                // decoration: const BoxDecoration(
+                //   color: ColorsDoc.white,
+                // ),
               ),
             ),
             ...List.generate(
