@@ -9,10 +9,11 @@ import 'package:flutter/material.dart';
 
 /// Flutter application responsible to show all elements that are generated.
 class DocPreview extends StatefulWidget {
-  DocPreview({required this.elements, this.title});
+  DocPreview({required this.elements, this.title, this.selectedIndex = -1});
 
   final List<ElementPreview> elements;
   final String? title;
+  final int selectedIndex;
 
   @override
   _DocPreviewState createState() => _DocPreviewState();
@@ -22,9 +23,17 @@ class _DocPreviewState extends State<DocPreview> {
   late ElementPreview _selectedItem;
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
+  ElementPreview get selectedItem {
+    if (widget.selectedIndex != -1 &&
+        widget.selectedIndex < widget.elements.length - 1) {
+      return widget.elements[widget.selectedIndex];
+    }
+    return widget.elements.last;
+  }
+
   @override
   void initState() {
-    _selectedItem = widget.elements.last;
+    _selectedItem = selectedItem;
     super.initState();
   }
 
