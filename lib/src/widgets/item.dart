@@ -6,6 +6,7 @@ import 'package:doc_widget/src/widgets/item_snippet.dart';
 
 class Item extends StatelessWidget {
   Item(this.element);
+
   final ElementPreview element;
 
   @override
@@ -14,7 +15,7 @@ class Item extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         ItemProperties(element.document),
-        ItemPreview(element.previews),
+        ItemPreview(element.previews, element.scrollDirection),
         if (element.document.snippet.isNotEmpty)
           ItemSnippet(element.document.snippet),
       ],

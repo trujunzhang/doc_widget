@@ -2,8 +2,11 @@ import 'package:flutter/widgets.dart';
 
 abstract class Documentation {
   String get name;
+
   List<PropertyDoc> get properties;
+
   bool get hasState;
+
   String get snippet;
 }
 
@@ -29,8 +32,10 @@ class ElementPreview {
   ElementPreview({
     required this.document,
     required this.previews,
+    this.scrollDirection = Axis.vertical,
   });
 
+  final Axis scrollDirection;
   final Documentation document;
   final List<WidgetPreview> previews;
 }
@@ -40,6 +45,7 @@ class WidgetPreview {
     required this.widget,
     this.description,
   });
+
   final Widget widget;
   final String? description;
 }
