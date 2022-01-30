@@ -27,11 +27,14 @@ class ItemPreview extends StatelessWidget {
 
   Widget _buildPreviewList() {
     if (scrollDirection == Axis.horizontal) {
-      return ListView.builder(
-        itemBuilder: (BuildContext context, int index) {
-          final preview = previews[index];
-          return ItemPreviewItem(preview);
-        },
+      return Container(
+        height: 200,
+        child: ListView.builder(
+          itemBuilder: (BuildContext context, int index) {
+            final preview = previews[index];
+            return ItemPreviewItem(preview);
+          },
+        ),
       );
     }
     return Column(
