@@ -1,3 +1,4 @@
+import 'package:doc_widget/src/utils/platform.dart';
 import 'package:doc_widget/src/widgets/item_preview_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -27,7 +28,7 @@ class ItemPreview extends StatelessWidget {
   }
 
   Widget _buildPreviewList() {
-    if (scrollDirection == Axis.horizontal) {
+    if (scrollDirection == Axis.horizontal && isMobile() == false) {
       return Container(
         height: 600,
         child: ListView.builder(
