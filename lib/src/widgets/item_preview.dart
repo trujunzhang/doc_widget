@@ -29,7 +29,7 @@ class ItemPreview extends StatelessWidget {
   Widget _buildPreviewList() {
     if (scrollDirection == Axis.horizontal) {
       return Container(
-        height: 400,
+        height: 600,
         child: ListView.builder(
           scrollDirection: Axis.horizontal,
           itemCount: previews.length,
