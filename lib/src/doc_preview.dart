@@ -52,7 +52,10 @@ class _DocPreviewState extends State<DocPreview> {
             horizontal: Spaces.goldenDream,
             vertical: Spaces.geraldine,
           ),
-          child: Item(_selectedItem),
+          child: Padding(
+            padding: const EdgeInsets.only(bottom: 48.0),
+            child: Item(_selectedItem),
+          ),
         ),
       );
     }
