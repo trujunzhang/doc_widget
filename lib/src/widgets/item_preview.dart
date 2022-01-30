@@ -30,6 +30,7 @@ class ItemPreview extends StatelessWidget {
       return Container(
         height: 200,
         child: ListView.builder(
+          scrollDirection: Axis.horizontal,
           itemBuilder: (BuildContext context, int index) {
             final preview = previews[index];
             return ItemPreviewItem(preview);
