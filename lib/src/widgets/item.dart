@@ -15,7 +15,7 @@ class Item extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         ItemProperties(element.document),
-        ItemPreview(element.previews, element.scrollDirection),
+        ItemPreview(element.previews, element.scrollDirection, element.height),
         if (element.document.snippet.isNotEmpty)
           ItemSnippet(element.document.snippet),
       ],

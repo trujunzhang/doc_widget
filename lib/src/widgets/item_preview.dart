@@ -7,10 +7,11 @@ import 'package:doc_widget/src/styles/spaces.dart';
 import 'package:doc_widget/src/widgets/title.dart';
 
 class ItemPreview extends StatelessWidget {
-  ItemPreview(this.previews, this.scrollDirection);
+  ItemPreview(this.previews, this.scrollDirection, this.height);
 
   final List<WidgetPreview> previews;
   final Axis scrollDirection;
+  final double height;
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +31,7 @@ class ItemPreview extends StatelessWidget {
   Widget _buildPreviewList() {
     if (scrollDirection == Axis.horizontal && isMobile() == false) {
       return Container(
-        height: 600,
+        height: height,
         child: ListView.builder(
           scrollDirection: Axis.horizontal,
           itemCount: previews.length,

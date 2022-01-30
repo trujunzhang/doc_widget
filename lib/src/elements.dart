@@ -33,8 +33,10 @@ class ElementPreview {
     required this.document,
     required this.previews,
     this.scrollDirection = Axis.vertical,
+    this.height = 600,
   });
 
+  final double height;
   final Axis scrollDirection;
   final Documentation document;
   final List<WidgetPreview> previews;
