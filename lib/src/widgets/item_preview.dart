@@ -20,6 +20,7 @@ class ItemPreview extends StatelessWidget {
         children: [
           TextPreview(text: 'Preview'),
           _buildPreviewList(),
+          SizedBox(height: 200),
         ],
       ),
     );
