@@ -13,6 +13,9 @@ dependencies:
   doc_widget_annotation: ^0.1.8
   flutter_highlight: ^0.7.0
 
+  # design systems
+  mix: 0.0.5
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

@@ -46,8 +46,12 @@ class WidgetPreview {
   WidgetPreview({
     required this.widget,
     this.description,
+    this.cardBox = false,
+    this.width = double.infinity,
   });
 
   final Widget widget;
   final String? description;
+  final double width;
+  final bool cardBox;
 }
