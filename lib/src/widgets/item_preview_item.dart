@@ -23,6 +23,17 @@ class ItemPreviewItem extends StatelessWidget {
         children: [preview.widget],
       );
     }
+
+    if (preview.width != double.infinity) {
+      Mix style = Mix.fromList([
+        width(preview.width),
+      ]);
+
+      return Box(
+        mix: style,
+        child: preview.widget,
+      );
+    }
     return preview.widget;
   }
 
